@@ -143,7 +143,7 @@ export class Character {
 		let collisionPoint = VectorUtil.setLength(this.velocity, collisionLength);
 		collisionPoint.add(this.location);
 
-		console.log("getting collision point")
+		
 		return collisionPoint;
 	}
 	avoidCollision(obstaclePosition, obstacleRadius, time) {
@@ -171,7 +171,7 @@ export class Character {
 			
 
 		}
-        console.log("avoiding collision by ");
+        
 		return steer;
 
 	}

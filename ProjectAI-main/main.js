@@ -30,7 +30,7 @@ const player = new Player(new THREE.Color(0xff0000));
 const enemy = new EnemyCroc(new THREE.Color(0x00ffff));
 
 //create Snow
-var snow = new Snow(scene,1000);
+var snow = new Snow(scene,200);
 
 let fishes=[];
 for(let i=0; i<15; i++){
@@ -54,7 +54,7 @@ function randomWaterTile(i){
 //const bot = new Bot(new THREE.Color(0x0000ff));
 // Setup our scene
 function setup() {
-	scene.background = new THREE.Color(0xffffff);
+	scene.background = new THREE.Color(0x000000);
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	document.body.appendChild(renderer.domElement);
 	camera.position.y = 80;
@@ -73,6 +73,7 @@ function setup() {
 	// add our characters to the scene
 	scene.add(enemy.gameObject);
 	scene.add(player.gameObject);
+	
 
 	for(let i=0; i<15; i++){
 		fishes[i].location=gameMap.localize(randomWaterTile(i));
