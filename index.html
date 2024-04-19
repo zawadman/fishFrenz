@@ -29,6 +29,10 @@
 				}
 			}
 		</script>
-		<script type="module" src="/main.js"></script>
+		<script type="module">
+        import * as THREE from 'three';
+        import { main } from '/main.js';
+        main(); // Assuming main.js initializes and runs the game
+    </script>
 	</body>
 </html>
