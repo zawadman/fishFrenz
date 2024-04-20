@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { OrbitControls } from 'node_modules/three/build/OrbitControls.js';
 //import { Character } from './Character.js';
 import { Bot } from './Bot.js';
 import { EnemyCroc } from './EnemyCroc.js';
