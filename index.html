@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
-	</head>
-	<body>
-		<style>
-			#info {
-				position: absolute;
-				top: 500px;
-				width: 100%;
-				text-align: center;
-				z-index: 100;
-				display:block;
-				font-size: 50px;
-				color: white;
-			}
-			</style>
-			<div id="info"> </div>
-		<script type="module" src="main.js"></script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>My Three.js Game</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="info"></div>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.140.0/build/three.module.js",
+                "three/addons/controls/OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.140.0/examples/jsm/controls/OrbitControls.js",
+                "./Bot.js": "Bot.js",
+                "./EnemyCroc.js": "EnemyCroc.js",
+                "./GameMap.js": "GameMap.js",
+                "./TileNode.js": "TileNode.js",
+                "./Behaviour/Player.js": "Behaviour/Player.js",
+                "./Behaviour/Controller.js": "Behaviour/Controller.js",
+                "./State.js": "State.js",
+                "./Pseudorandom.js": "Pseudorandom.js",
+                "./Snow.js": "Snow.js"
+            }
+        }
+    </script>
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls';
+        import { Bot } from './Bot.js';
+        import { EnemyCroc } from './EnemyCroc.js';
+        import { GameMap } from './GameMap.js';
+        import { TileNode } from './TileNode.js';
+        import { Player } from './Behaviour/Player.js';
+        import { Controller } from './Behaviour/Controller.js';
+        import { IdleState } from './State.js';
+        import { Pseudorandom } from './Pseudorandom.js';
+        import { Snow } from './Snow.js';
+
+        // Additional game setup and logic here...
+    </script>
+</body>
 </html>
